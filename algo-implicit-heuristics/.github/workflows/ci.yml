@@ -1,0 +1,32 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Checklist accepts a compliant lesson
+        run: |
+          python skills/algo-implicit-heuristics/scripts/check_lesson.py \
+            tests/fixtures/good_lesson.txt \
+            --terms "连续段" --verbs "留下" --entity "[1, 1, 2]"
+
+      - name: Checklist rejects a violating lesson
+        run: |
+          if python skills/algo-implicit-heuristics/scripts/check_lesson.py \
+               tests/fixtures/bad_lesson.txt --terms "环"; then
+            echo "bad fixture unexpectedly passed"
+            exit 1
+          fi
