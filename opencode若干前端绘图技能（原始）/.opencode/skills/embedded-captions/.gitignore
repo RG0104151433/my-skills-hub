@@ -18,4 +18,7 @@ plan.json
 matte.fps
 safe-zones.json
 
+# Test fixtures are checked-in inputs, not render outputs.
+!scripts/fixtures/**
+
 .DS_Store
