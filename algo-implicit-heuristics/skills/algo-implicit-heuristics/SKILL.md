@@ -3,7 +3,7 @@ name: algo-implicit-heuristics
 display_name: 算法认知隐性启发
 display_name_en: Implicit Heuristics for Algorithm Cognition
 description: 用隐性启发（并行案例、参数微调、命名渗透）设计算法题讲解，并以行为信号诊断学习者盲区，把"看题解"变成可迁移的概念形成。适用于用户请求讲解力扣/LeetCode 题目或题型、准备算法面试、要求"真正理解"某类题、把题解改写成概念课，或排查"自认为会了但独立做不出"的校准误差时。模块 A/B 是方法实例不是题库分区，未覆盖题类按 3.2 路由；仅需代码、报错调试、复杂度分析或 API 查询的请求不适用。
-version: 2.8.0
+version: 2.8.1
 agent_created: true
 ---
 

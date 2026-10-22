@@ -33,6 +33,16 @@
 Skill 是纯 Markdown 加一个 Python 脚本，不依赖特定模型、IDE 或插件。
 
 - **WorkBuddy**：把 `skills/algo-implicit-heuristics/` 整个目录放进 `~/.workbuddy/skills/`。
+- **WorkBuddy 云端（Web 端 / 云端任务）**：客户端个人库与 Web 端个人库**互不相通**，
+  云端任务只能选到云上个人库里的 Skill。用本仓库自带的发布脚本上传：
+
+  ```bash
+  python scripts/publish_skill_to_cloud.py algo-implicit-heuristics
+  ```
+
+  脚本经客户端 WBIPC `wb.request/http.fetch` 通道（自动带登录态）把技能包 POST 到
+  `/v2/user-asset/custom-skills`，等待云端校验 `ready` 后即可在云端任务中选用。
+  版本号需递增——同名同版本会被服务端拒绝（`17416`）。
 - **其他支持 SKILL.md 的 Agent**：放进对应的 skills 目录，保持目录名与 `name` 字段一致。
 - **没有 skills 机制**：把 `SKILL.md` 的内容作为系统提示的一部分，效果相同。
 
@@ -77,6 +87,7 @@ python skills/algo-implicit-heuristics/scripts/check_lesson.py lesson.txt \
 skills/algo-implicit-heuristics/
   SKILL.md                 # 技能正文（唯一权威来源）
   scripts/check_lesson.py  # 5.1 清单的可执行子集
+  scripts/publish_skill_to_cloud.py  # 一键上传到云端个人技能库
 docs/
   design.md                # 设计原理、取舍与已知局限
   roadmap.md               # 从 alpha 到可发布版本的路线
