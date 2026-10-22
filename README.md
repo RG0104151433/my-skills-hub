@@ -43,6 +43,7 @@ my-skills-hub/
 │   ├── .github/workflows/ci.yml           #   CI
 │   ├── CHANGELOG.md / CONTRIBUTING.md / HANDOFF.md
 │   ├── LICENSE                            #   该子项目独立 MIT 协议
+|   ├── 算法教学技能优化点记录.md
 │   └── README.md
 │
 └── opencode若干前端绘图技能（原始）/        # 【收集整理】前端 / 动画 / 视频生成技能包
