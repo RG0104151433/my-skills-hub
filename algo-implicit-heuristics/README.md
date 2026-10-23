@@ -96,6 +96,7 @@ examples/
   02-adjacency-xor.md      # 邻接约束：把位运算条件翻译掉
 tests/                     # 校验脚本的正例/反例测试
 HANDOFF.md                 # 交接说明：资产位置、设计约束、未完成事项
+算法教学技能优化点记录.md      # 记录使用中发现的优化点
 ```
 
 ## English
