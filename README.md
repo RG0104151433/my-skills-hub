@@ -223,3 +223,15 @@ python algo-implicit-heuristics/skills/algo-implicit-heuristics/scripts/check_le
 - 本仓库主要用于个人学习与工作流沉淀，技能质量与适用性请自行评估。
 - 部分技能依赖外部 CLI、API Key 或商业服务（如 HeyGen、Remotion 渲染环境），使用前请阅读对应 `SKILL.md` 的安装说明。
 - 欢迎 Star、Fork，或通过 Issue / PR 交流。
+
+---
+
+## 相关仓库
+
+同一时期的其他项目分别在各自仓库维护：
+
+| 仓库 | 内容 |
+| --- | --- |
+| [oasis-front-end-game](https://github.com/RG0104151433/oasis-front-end-game) | 前端网页游戏《绿洲 · OASIS LEGACY》：1.0 原型（HTML/CSS/原生 JS + Canvas）与 2.0 重做版的剧本、数据契约。本仓库的 `opencode若干前端绘图技能（原始）/` 就是为它收集的前端绘图/动画/视频技能包，需要时按上文「如何使用」安装。 |
+| [python-football-project](https://github.com/RG0104151433/python-football-project) | 国际足球分析课程项目：国家队动态 Elo 评级与时间回测。 |
+| [grade-2-at-ruixin](https://github.com/RG0104151433/grade-2-at-ruixin) | 大二上学习记录：课程复习、算法题、Python 入门，以及早期项目存档。 |
